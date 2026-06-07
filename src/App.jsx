@@ -624,8 +624,8 @@ export default function App() {
   const incrementUsage = () => {
     const newCount = decisionsThisMonth + 1;
     const newTotal = totalDecisions + 1;
-    setDecisionsThisMonth(newCount);
-    setTotalDecisions(newTotal);
+    
+  
     store.set("clarity_usage", { count:newCount, month: new Date().getMonth() });
     store.set("clarity_total", newTotal);
     // Trigger confetti at milestones
@@ -690,7 +690,7 @@ export default function App() {
     setStage("clarify"); setStageCount(0); setInput(""); setError(null);
   };
 
-  const remaining = Math.max(0, FREE_LIMIT - decisionsThisMonth);
+  
 
   return (
     <div style={{ minHeight:"100vh", background:"#0a0a0a", color:"#e0e0e0", fontFamily:"'Helvetica Neue',Arial,sans-serif", display:"flex", flexDirection:"column" }}>
