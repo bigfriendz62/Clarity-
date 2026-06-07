@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 
 // ─── Config ──────────────────────────────────────────────────────────────────
-const FREE_LIMIT = 999999;
+const FREE_LIMIT 
 const UNLOCK_AT = 3;
 const PRICE_MONTHLY = 9;
 const PRICE_ANNUAL = 60;
