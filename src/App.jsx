@@ -76,7 +76,7 @@ async function callClaude(messages, systemPrompt) {
   const res = await fetch("/api/chat", {
     method: "POST",
     headers: { "Content-Type": "application/json", ...(apiKey ? { "x-api-key": apiKey } : {}) },
-    body: JSON.stringify({ model: "claude-sonnet-4-20250514", max_tokens: 1000, system: systemPrompt, messages }),
+    body: JSON.stringify({ model: "claude-sonnet-4-5", max_tokens: 1000, system: systemPrompt, messages }),
   });
   if (!res.ok) { const e = await res.json().catch(() => ({})); throw new Error(e?.error?.message || `Error ${res.status}`); }
   const data = await res.json();
